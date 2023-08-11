@@ -16,7 +16,29 @@
 
             button {
                 padding: 10px 20px;
+                font-size: 50px;
+                background-color: blue;
+                color: ghostwhite;
+                border-width: 2px;
+                border-style: dashed;
+                border-color: ghostwhite;
+                border-radius: 15px;
+                cursor: pointer;
+
             }
         </style>
     </head>
+    <body>
+        <button id="myButton">Einfacher Rentenrechner</button>
+        <div id="messageBox"></div>
+
+        <script>
+            var button = document.getElementById("myButton");
+            var messageBox = document.getElementById("messageBox");
+
+            button.addEventListener("click", function()) {
+                alert("Hoffen wir mal aufs Beste");
+            }
+        </script>
+    </body>
 </html>
