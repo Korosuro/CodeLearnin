@@ -4,11 +4,11 @@
         <title>Einfache Darstellung grafischer Oberflächen mit Auswahlfunktion</title>
         <style>
             body {
-                background-image: url("Phönix BG.jpg");
+                background-image: url("BG_Bird.jpg");
                 background-size: cover;
-                background-position: center;
+                background-position: inherit;
                 background-repeat: no-repeat;
-                display: flex;
+                display:flex;
                 justify-content: center;
                 align-items: center;
                 height: 100hv;
@@ -17,7 +17,7 @@
             button {
                 padding: 10px 20px;
                 font-size: 50px;
-                background-color: blue;
+                background-color: rgba(165, 48, 13, 0.781);
                 color: ghostwhite;
                 border-width: 2px;
                 border-style: dashed;
@@ -31,6 +31,13 @@
     <body>
         <button id="myButton">Einfacher Rentenrechner</button>
         <script>
+
+            var button = document.getElementById("myButton");
+            button.style.position = "absolute";
+            button.style.left = "50px";
+            button.style.top = "50px";
+            //Anpassung der Button-Position
+
             function myEventHandler() {
                 alert("Button wurde geklickt");
                 //Hier Code einfügen für tatsächlichen Rechner
@@ -41,7 +48,63 @@
 
             button.addEventListener("click", myEventHandler);
             //Einfügen Event-Handler mit addEventListener = festlegen von Aktion zum Auslösen des Events
-            
+
         </script>
+
+        <label for="v1">Entgeltpunkte:</label>
+        <input type="text" id="v1Input"><br>
+        
+        <label for="v2">Zugangsfaktor:</label>
+        <input type="text" id="v2Input"><br>
+
+        <label for="v3">Rentenartfaktor:</label>
+        <input type="text" id="v3Input"><br>
+
+        <label for="v4">Aktueller Rentenwert:</label>
+        <input type="text" id="v4Input"><br>
+
+        <button onclick="setVariables()">Variablen festlegen</button>
+        
+        <script>
+            function isValidNumber(inputValue) {
+                //Überprüfung, ob Wert eine gültige Zahl ist
+                var regex = new RegExp('^-?\\d+(\\.\\d{1,${4}})?$');
+                return regex.test(inputValue);
+            }
+
+            function setVariables() {
+                var v1Input = document.getElementById("v1Input");
+                var v2Input = document.getElementById("v2Input");
+                var v3Input = document.getElementById("v3Input");
+                var v4Input = document.getElementById("v4Input");
+
+                var v1 = v1Input.value;
+                var v2 = v2Input.value;
+                var v3 = v3Input.value;
+                var v4 = v4Input.value;
+
+                if (!isValidDecimal(v1, 4)) {
+                    alert("Dies ist kein gültiger Wert für Entgeltpunkte");
+                    return;
+                }
+
+                if (!isValidDecimal(v2, 4)) {
+                    alert("Dies ist kein gültiger Wert für den Zugangsfaktor");
+                    return;
+                }
+
+                if (!isValidDecimal(v3, 4)) {
+                    alert("Dies ist kein gültiger Wert für den Rentenartfaktor");
+                    return;
+                }
+
+                if (!isValidDecimal(v4, 4)) {
+                    alert("Dies ist kein gültiger aktueller Rentenwert");
+                    return;
+                }
+            }
+
+        </script>
+
     </body>
 </html> 

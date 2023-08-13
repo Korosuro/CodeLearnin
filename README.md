@@ -12,3 +12,5 @@ Button Design
     border-color:       Rahmenfarbe
     border-radius:      Abrundung der Ecken
     cursor:             Art des Cursors auf dem Knopf
+
+Im Code wird ein Eingabefeld zugefügt, mit dem mit vorgegebenen Zahlen eine Rente berechnet werden kann (EP, ZF, RF, ARW)
