@@ -30,15 +30,18 @@
     </head>
     <body>
         <button id="myButton">Einfacher Rentenrechner</button>
-        <div id="messageBox"></div>
-
         <script>
-            var button = document.getElementById("myButton");
-            var messageBox = document.getElementById("messageBox");
-
-            button.addEventListener;"click"; function() {
-                alert("Hoffen wir mal aufs Beste");
+            function myEventHandler() {
+                alert("Button wurde geklickt");
+                //Hier Code einfügen für tatsächlichen Rechner
             }
+
+            var button = document.getElementById("myButton");
+            //Aufruf des HTML-Elements und speichern in der Variable
+
+            button.addEventListener("click", myEventHandler);
+            //Einfügen Event-Handler mit addEventListener = festlegen von Aktion zum Auslösen des Events
+            
         </script>
     </body>
 </html> 
