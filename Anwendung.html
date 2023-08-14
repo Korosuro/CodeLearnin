@@ -14,18 +14,16 @@
                 align-items: center;
                 height: 100hv;
             }
-
-            
         </style>
     </head>
     <body>
-        <button id="myButton">Einfacher Rentenrechner</button>
+        <button id="myButton" button class="button-1">Einfacher Rentenrechner</button>
         <script>
 
             var button = document.getElementById("myButton");
             button.style.position = "absolute";
             button.style.left = "50px";
-            button.style.top = "75px";
+            button.style.top = "10px";
             //Anpassung der Button-Position
 
             function myEventHandler() {
@@ -41,20 +39,22 @@
 
         </script>
 
+    <div class="container">
         <label for="v1">Entgeltpunkte:</label>
-        <input type="text" id="v1Input"><br>
+        <input type="text" id="v1Input">
         
         <label for="v2">Zugangsfaktor:</label>
-        <input type="text" id="v2Input"><br>
+        <input type="text" id="v2Input">
 
         <label for="v3">Rentenartfaktor:</label>
-        <input type="text" id="v3Input"><br>
+        <input type="text" id="v3Input">
 
         <label for="v4">Aktueller Rentenwert:</label>
-        <input type="text" id="v4Input"><br>
+        <input type="text" id="v4Input">
 
         <button onclick="setVariables()">Variablen festlegen</button>
-        
+    </div>
+
         <script>
             function isValidNumber(inputValue) {
                 //Überprüfung, ob Wert eine gültige Zahl ist

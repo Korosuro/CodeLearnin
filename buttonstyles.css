@@ -9,3 +9,15 @@
                 border-radius: 15px;
                 cursor: pointer;
     }
+
+    /*Kopf-Button*/
+
+.container {
+    margin-top: 105px;
+    margin-right: 435px;
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+}
+    /*Container mit Eingabefeldern für Rentenberechnung*/
