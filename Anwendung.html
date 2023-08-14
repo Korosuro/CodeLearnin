@@ -39,78 +39,47 @@
 
         </script>
 
-    <div class="container">
-        <label for="v1">Entgeltpunkte:</label>
-        <input type="text" id="v1Input">
-        
-        <label for="v2">Zugangsfaktor:</label>
-        <input type="text" id="v2Input">
+        <div class="container">
+            <div>
+                <label for="v1">Entgeltpunkte</label>
+                <input type="number" id="v1">
+            </div>
+            <div>
+                <label for="v2">Zugangsfaktor</label>
+                <input tpye="number" id="v2">
+            </div>
+            <div>
+                <label for="v3">Rentenartfaktot</label>
+                <input type="number" id="v3">
+            </div>
+            <div>
+                <label for="v4">Aktueller Rentenwert</label>
+                <input type="number" id="v4">
+            </div>
+        </div>
 
-        <label for="v3">Rentenartfaktor:</label>
-        <input type="text" id="v3Input">
-
-        <label for="v4">Aktueller Rentenwert:</label>
-        <input type="text" id="v4Input">
-
-        <button onclick="setVariables()">Variablen festlegen</button>
-    </div>
+        <button onclick="Rente()">Berechnen</button>
+        <div id="Rente"></div>
 
         <script>
-            function isValidNumber(inputValue) {
-                //Überprüfung, ob Wert eine gültige Zahl ist
-                var regex = new RegExp('^-?\\d+(\\.\\d{1,${4}})?$');
-                return regex.test(inputValue);
-            }
-            
-            function calculateResults(v1, v2, v3, v4) {
-                var result = parseFloat(v1) * parseFloat(v2) * parseFloat(v3) * parseFloat(v4);
-                return result;
-            }
-
-            function setVariables() {
-                var v1Input = document.getElementById("v1Input");
-                var v2Input = document.getElementById("v2Input");
-                var v3Input = document.getElementById("v3Input");
-                var v4Input = document.getElementById("v4Input");
-
-                var v1 = v1Input.value;
-                var v2 = v2Input.value;
-                var v3 = v3Input.value;
-                var v4 = v4Input.value;
-
-                if (!isValidDecimal(v1, 4)) {
-                    alert("Dies ist kein gültiger Wert für Entgeltpunkte");
+            function Rente() {
+                var v1 = parseFloat(document.getElementById("v1").value);
+                var v2 = parseFloat(document.getElementById("v2").value);
+                var v3 = parseFloat(document.getElementById("v3").value);
+                var v4 = parseFloat(document.getElementById("v4").value);
+                
+                if (isNaN(v1) || isNaN(v2) || isNaN(v3) || isNaN(v4)) {
+                    document.getElementById("Rente").textContent = "Ungültige Eingabe";
                     return;
                 }
 
-                if (!isValidDecimal(v2, 4)) {
-                    alert("Dies ist kein gültiger Wert für den Zugangsfaktor");
-                    return;
-                }
-
-                if (!isValidDecimal(v3, 4)) {
-                    alert("Dies ist kein gültiger Wert für den Rentenartfaktor");
-                    return;
-                }
-
-                if (!isValidDecimal(v4, 4)) {
-                    alert("Dies ist kein gültiger aktueller Rentenwert");
-                    return;
-                }
-        
-            var calculationResult = calculateResults(v1, v2, v3, v4);
-            openResultWindow(calculationResult);
-            
+                var Rente = v1 * v2 * v3 *v4;
+                
+                document.getElementById("Rente").textContent = "Die Höhe der Rente beträgt " + Rente;
             }
 
-        function openResultWindow(result)  {
-            var resultWindow = window.open("", "Berechnungsergebnis", "width=400,height=300");
-            resultWindow.document.write("<h2>Berechnungsergebnis<(h2>)");
-            resultWindow.document.write("<p>Das Ergebnis der Berechnung ist: " + result + "</p>");
-            resultWindow.document.close();
-        }
-        
         </script>
+
 
     </body>
 </html> 
