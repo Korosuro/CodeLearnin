@@ -61,6 +61,11 @@
                 var regex = new RegExp('^-?\\d+(\\.\\d{1,${4}})?$');
                 return regex.test(inputValue);
             }
+            
+            function calculateResults(v1, v2, v3, v4) {
+                var result = parseFloat(v1) * parseFloat(v2) * parseFloat(v3) * parseFloat(v4);
+                return result;
+            }
 
             function setVariables() {
                 var v1Input = document.getElementById("v1Input");
@@ -92,8 +97,19 @@
                     alert("Dies ist kein gültiger aktueller Rentenwert");
                     return;
                 }
+        
+            var calculationResult = calculateResults(v1, v2, v3, v4);
+            openResultWindow(calculationResult);
+            
             }
 
+        function openResultWindow(result)  {
+            var resultWindow = window.open("", "Berechnungsergebnis", "width=400,height=300");
+            resultWindow.document.write("<h2>Berechnungsergebnis<(h2>)");
+            resultWindow.document.write("<p>Das Ergebnis der Berechnung ist: " + result + "</p>");
+            resultWindow.document.close();
+        }
+        
         </script>
 
     </body>

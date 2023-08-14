@@ -14,3 +14,5 @@ Button Design
     cursor:             Art des Cursors auf dem Knopf
 
 Im Code wird ein Eingabefeld zugefügt, mit dem mit vorgegebenen Zahlen eine Rente berechnet werden kann (EP, ZF, RF, ARW)
+Im selben Container wird nach Bestätigung der Eingabe eine Berechnung durchgeführt, die in einem neuen Fenster innerhalb des Containers
+angezeigt werden soll.
