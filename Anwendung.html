@@ -14,7 +14,28 @@
                 align-items: center;
                 height: 100hv;
             }
+
+            #Rente {
+                background-color: white;
+                padding: 10px;
+                margin-top: 10px;
+                width: 500px;
+                height: 100px;
+            }
+
+            button[onclick="Rente()"] {
+                background-color: white;
+                color: black;
+                border: rgba(165, 48, 13, 0.781);
+                padding: 8px 16px;
+                cursor: pointer;
+                margin: 10px;
+                position: absolute;
+                left: 40px;
+                top: 100px;
+            }
         </style>
+
     </head>
     <body>
         <button id="myButton" button class="button-1">Einfacher Rentenrechner</button>
@@ -28,7 +49,6 @@
 
             function myEventHandler() {
                 alert("Button wurde geklickt");
-                //Hier Code einfügen für tatsächlichen Rechner
             }
 
             var button = document.getElementById("myButton");
@@ -46,10 +66,10 @@
             </div>
             <div>
                 <label for="v2">Zugangsfaktor</label>
-                <input tpye="number" id="v2">
+                <input type="number" id="v2">
             </div>
             <div>
-                <label for="v3">Rentenartfaktot</label>
+                <label for="v3">Rentenartfaktor</label>
                 <input type="number" id="v3">
             </div>
             <div>
@@ -73,13 +93,12 @@
                     return;
                 }
 
-                var Rente = v1 * v2 * v3 *v4;
+                var GRente = v1 * v2 * v3 *v4;
+                var Rente = GRente.toFixed(2); //Rundung der Zahl auf 2 Nachkommastellen
                 
-                document.getElementById("Rente").textContent = "Die Höhe der Rente beträgt " + Rente;
+                document.getElementById("Rente").textContent = "Die Höhe der Rente beträgt " + Rente + " Euro";
             }
 
         </script>
-
-
     </body>
 </html> 

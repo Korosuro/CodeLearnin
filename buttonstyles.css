@@ -13,10 +13,20 @@
     /*Kopf-Button*/
 
 .container {
-    margin-top: 105px;
-    margin-right: 435px;
+    margin: 10px;
+    position: absolute;
+    left: 40px;
+    top: 100px;
     background-color: white;
     padding: 10px 20px;
     cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-end;  
 }
+
+
     /*Container mit Eingabefeldern für Rentenberechnung*/
+
