@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Einfache Darstellung grafischer Oberflächen mit Auswahlfunktion</title>
+        <link rel="stylesheet" type="text/css" href="buttonstyles.css">
         <style>
             body {
                 background-image: url("BG_Bird.jpg");
@@ -14,18 +15,7 @@
                 height: 100hv;
             }
 
-            button {
-                padding: 10px 20px;
-                font-size: 50px;
-                background-color: rgba(165, 48, 13, 0.781);
-                color: ghostwhite;
-                border-width: 2px;
-                border-style: dashed;
-                border-color: ghostwhite;
-                border-radius: 15px;
-                cursor: pointer;
-
-            }
+            
         </style>
     </head>
     <body>
@@ -35,7 +25,7 @@
             var button = document.getElementById("myButton");
             button.style.position = "absolute";
             button.style.left = "50px";
-            button.style.top = "50px";
+            button.style.top = "75px";
             //Anpassung der Button-Position
 
             function myEventHandler() {
