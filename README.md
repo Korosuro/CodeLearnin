@@ -4,7 +4,7 @@ Anwendung mit grundlegender Website mit mehreren Buttons mit verschiedenen Funkt
 
 Button Design
     padding:            Abstand vom Text zum Rand vom Button
-    font-size:          Größe Knopf
+    font-size:          Schriftgröße
     background-color:   Farbe vom Knopf
     color:              Schriftfarbe
     border-width:       Rahmenbreite
@@ -20,3 +20,14 @@ angezeigt werden soll.
 Ausgabebutton für Berechnung muss noch gemacht werden ====> Ist gemacht und funktioniert
 
 Anordnung und Größenverhältnisse der Fenster ist abgeschlossen
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In die Rentenberechnung müssen Zuschlagsberechnungen durchgeführt werden. Dazu gehören: BÜZ, KEZ, AZ, Grundrente
+Optional müssen Zuschläge für BZ vor 1992 geprüft werden und Zuschläge für H-Renten
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
