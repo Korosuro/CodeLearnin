@@ -1,12 +1,11 @@
 .button-1 {
     padding: 10px 20px;
                 font-size: 50px;
-                background-color: rgba(165, 48, 13, 0.781);
-                color: ghostwhite;
+                background-color: white;
+                color: black;
                 border-width: 2px;
                 border-style: dashed;
                 border-color: ghostwhite;
-                border-radius: 15px;
                 cursor: pointer;
     }
 
