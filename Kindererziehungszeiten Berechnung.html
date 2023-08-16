@@ -36,6 +36,18 @@
             border-width: 2px;
             cursor: pointer;
         }
+
+        #InputContainer {
+            background-color: white;
+            font-size: 30px;
+            padding: 10px;
+            border-color: ghostwhite;
+            border-style: dashed;
+            border-width: 2px;
+            position: absolute;
+            left: 50px;
+            top: 174px;
+        }
     </style>
     <body>
         <button class="Headline">Berechnung Entgeltpunkte für Kindererziehungszeiten</button> 
@@ -43,15 +55,22 @@
         <div id="InputContainer"></div>
         
         <script>
-            document.getElementById("InputAnzeigen").addEventListener("click") {
-                var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der Versicherten Person anerkannt")); //Nach wie vor SyntaxError in Zeile drüber bzg token nach click
+            document.getElementById("InputAnzeigen").addEventListener("click", function() {
+                var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); //Nach wie vor SyntaxError in Zeile drüber bzg token nach click
 
-                if (!IsNaN(KAnz) && KAnz > 0) {
+                if (!isNaN(KAnz) && KAnz > 0) {
                     var container = document.getElementById("InputContainer");
-                    container.innerHTML = ""; //Löschen von Feldinhalt
+                    container.innerHTML = ""; 
                 }
 
-            }
+                for(var i=0; i < KAnz; i++) {
+                    var input = document.createElement("input");
+                    input.type = "number";
+                    input.placeholder = "Kind Nummer " + (i + 1);
+                    container.appendChild(input);
+                }
+
+            });
         </script>
 
     </body>
