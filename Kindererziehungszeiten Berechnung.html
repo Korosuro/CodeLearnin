@@ -23,8 +23,37 @@
             border-color: ghostwhite;
             cursor: pointer;
         }
+
+        #InputAnzeigen {
+            background-color: white;
+            font-size: 30px;
+            padding: 10px;
+            position: absolute;
+            left: 50px;
+            top: 104px;
+            border-color: ghostwhite;
+            border-style: dashed;
+            border-width: 2px;
+            cursor: pointer;
+        }
     </style>
     <body>
-        <button class="Headline">Berechnung Entgeltpunkte für Kindererziehungszeiten</button>
+        <button class="Headline">Berechnung Entgeltpunkte für Kindererziehungszeiten</button> 
+        <button id="InputAnzeigen">Eingabefelder anzeigen</button>
+        <div id="InputContainer"></div>
+        
+        <script>
+            document.getElementById("InputAnzeigen").addEventListener("click") {
+                var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der Versicherten Person anerkannt")); //Nach wie vor SyntaxError in Zeile drüber bzg token nach click
+
+                if (!IsNaN(KAnz) && KAnz > 0) {
+                    var container = document.getElementById("InputContainer");
+                    container.innerHTML = ""; //Löschen von Feldinhalt
+                }
+
+            }
+        </script>
+
     </body>
+
 </html>
