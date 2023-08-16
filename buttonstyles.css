@@ -1,12 +1,12 @@
 .button-1 {
     padding: 10px 20px;
-                font-size: 50px;
-                background-color: white;
-                color: black;
-                border-width: 2px;
-                border-style: dashed;
-                border-color: ghostwhite;
-                cursor: pointer;
+    font-size: 50px;
+    background-color: white;
+    color: black;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: ghostwhite;
+    cursor: pointer;
     }
 
     /*Kopf-Button*/

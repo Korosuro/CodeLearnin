@@ -28,6 +28,6 @@ Optional müssen Zuschläge für BZ vor 1992 geprüft werden und Zuschläge für
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+Zur Verwendung von Variablen zwischen verschiedenen HTML Dokumenten müssen Cookies verwendet werden.
 
 
