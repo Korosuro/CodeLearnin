@@ -51,15 +51,31 @@
             left: 50px;
             top: 174px;
         }
+
+        /*Gestaltung KEZ_Ausgabe Fenster*/
+        #KEZ_Ausgabe {
+            background-color: white;
+            font-size: 30px;
+            padding: 10px;
+            border-color: ghostwhite;
+            border-style: dashed;
+            border-width: 2px;
+            position: absolute;
+            left: 400px;
+            top: 104px;
+        }
+
+
     </style>
     <body>
         <button class="Headline">Berechnung Entgeltpunkte für Kindererziehungszeiten</button> 
         <button id="InputAnzeigen">Eingabefelder anzeigen</button>
         <div id="InputContainer"></div>
+        <div id="KEZ_Ausgabe"></div>
         
         <script>
             document.getElementById("InputAnzeigen").addEventListener("click", function() {
-                var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); //Nach wie vor SyntaxError in Zeile drüber bzg token nach click
+                var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); 
 
                 if (!isNaN(KAnz) && KAnz > 0) {
                     var container = document.getElementById("InputContainer");
@@ -75,7 +91,7 @@
                     container.appendChild(input);
                 
                 }
-                
+
                 input.addEventListener("input", function() {
                     sum = 0;
 
@@ -86,11 +102,13 @@
                             sum += KEZKM; //Wert zur Summe addiert
                         }
                     }
-                
-                    alert("Aktuelle Summe: " + KEZKM);
+
+                    document.getElementById("KEZ_Ausgabe").textContent = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + "KM";
+                });
             });
-        </script>
+        
+            </script>
 
     </body>
 
-</html>
+</html> 
