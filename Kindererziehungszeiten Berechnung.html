@@ -66,13 +66,28 @@
                     container.innerHTML = ""; 
                 }
 
+                var sum = 0; //Initialisierung der Summe aller KM
+
                 for(var i=0; i < KAnz; i++) {
                     var input = document.createElement("input");
                     input.type = "number";
                     input.placeholder = "Kind Nummer " + (i + 1);
                     container.appendChild(input);
+                
                 }
+                
+                input.addEventListener("input", function() {
+                    sum = 0;
 
+                    var inputs = container.getElementsByTagName("input");
+                    for (var j = 0; j < inputs.length; j++) {
+                        var KEZKM = parseFloat(inputs[j].value);
+                        if (!isNaN(KEZKM)) {
+                            sum += KEZKM; //Wert zur Summe addiert
+                        }
+                    }
+                
+                    alert("Aktuelle Summe: " + KEZKM);
             });
         </script>
 
