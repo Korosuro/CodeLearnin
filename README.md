@@ -30,4 +30,6 @@ Optional müssen Zuschläge für BZ vor 1992 geprüft werden und Zuschläge für
 
 Zur Verwendung von Variablen zwischen verschiedenen HTML Dokumenten müssen Cookies verwendet werden.
 
+&nbsp; zur Erstellung von Leerzeichen, die nicht zusammengezogen werden
+&emsp; zur Erstellung von Tabulatoren, die nicht zusammengezogen werden
 

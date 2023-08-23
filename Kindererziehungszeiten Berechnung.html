@@ -49,6 +49,7 @@
             border-width: 2px;
             position: absolute;
             left: 50px;
+            right: 1135px;
             top: 174px;
         }
 
@@ -62,10 +63,22 @@
             border-width: 2px;
             position: absolute;
             left: 50px;
-            right: 50px;
+            right: 985px;
             top: 700px;
         }
 
+        #KEZ_Einzelteile {
+            background-color: white;
+            font-size: 30px;
+            padding: 10px;
+            border-color: ghostwhite;
+            border-style: dashed;
+            border-width: 2px;
+            position: absolute;
+            left: 985px;
+            right: 50px;
+            top: 174px;
+        }
 
     </style>
     <body>
@@ -73,6 +86,7 @@
         <button id="InputAnzeigen">Eingabefelder anzeigen</button>
         <div id="InputContainer"></div>
         <div id="KEZ_Ausgabe"></div>
+        <div id="KEZ_Einzelteile"></div>
         
         <script>
             document.getElementById("InputAnzeigen").addEventListener("click", function() {
@@ -104,7 +118,7 @@
                         }
                     }
 
-                    document.getElementById("KEZ_Ausgabe").textContent = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + "KM. Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte. Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833";
+                    document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833;
                 });
             });
         
