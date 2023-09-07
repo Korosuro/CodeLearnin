@@ -15,7 +15,8 @@ Button Design
 
 Im Code wird ein Eingabefeld zugefügt, mit dem mit vorgegebenen Zahlen eine Rente berechnet werden kann (EP, ZF, RF, ARW)
 Im selben Container wird nach Bestätigung der Eingabe eine Berechnung durchgeführt, die in einem neuen Fenster neben dem Containers
-angezeigt werden soll.
+angezeigt werden soll.    
+====> Ist gemacht und funktioniert
 
 Ausgabebutton für Berechnung muss noch gemacht werden ====> Ist gemacht und funktioniert
 
