@@ -29,11 +29,15 @@
                 border-color: black;
                 border-width: 2px;
                 border-style: solid;
+                transition: background-color 0.7s, width 0.7s, height 0.7s, color 0.7s, font-size 0.7s;
             }
 
             #Rente:hover {
-                background-color: cyan;
-
+                background-color: blue;
+                width: 600px;
+                height: 120px;
+                color: white;
+                font-size: 48px;
             }
 
             /*ReferenceButton KEZ*/
@@ -51,6 +55,7 @@
                 left: 530px;
                 top: 100px;
                 font-size: 16px;
+                transition: background-color 0.7s, color 0.7s, font-size 0.7s, left 0.7s, top 0.7s;
             }
 
             .KEZ {
@@ -63,15 +68,42 @@
                 position: absolute;
                 top: 100px;
                 left: 645px;
-
             }
+
+            .KEZ:hover {
+                background-color: blue;
+                color: white;
+                font-size: 21px;
+                z-index: 2;
+                top: 96px;
+                left: 630px;
+                transition: background-color 0.7s, color 0.7s, font-size 0.7s, left 0.7s, top 0.7s;
+            }
+
+            .KEZ_Link:link {
+                color: black;
+            }
+            
+            .KEZ_Link:hover {
+                color: white;
+            }
+
+            button[onclick="Rente()"]:hover {
+                background-color: blue;
+                color: white;
+                font-size: 24px;
+                z-index: 2;
+                left: 512px;
+                top: 96px;
+            }
+        
             
         </style>
 
     </head>
     <body>
         <button id="myButton" button class="button-1">Einfacher Rentenrechner</button>
-        <button class="KEZ"><a href="Kindererziehungszeiten Berechnung.html" target="_blank">Kindererziehungszeiten errechnen</a></button>
+        <button class="KEZ"><a href="Kindererziehungszeiten Berechnung.html" class="KEZ_Link" target="_blank">Kindererziehungszeiten errechnen</a></button>
         <script>
 
             var button = document.getElementById("myButton");

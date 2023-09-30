@@ -37,6 +37,7 @@
             border-style: solid;
             border-width: 2px;
             cursor: pointer;
+            transition: background-color 0.7s, color 0.7s, font-size 0.7s, left 0.7s, top 0.7s;
         }
 
         /*Gestaltung Container mit angegebener Menge Eingabefeldern*/
@@ -51,6 +52,14 @@
             left: 50px;
             right: 1135px;
             top: 174px;
+        }
+
+        #InputAnzeigen:hover {
+            background-color: blue;
+            color: white;
+            font-size: 36px;
+            left: 50px;
+            top: 104px;
         }
 
         /*Gestaltung KEZ_Ausgabe Fenster*/
@@ -125,7 +134,7 @@
         </script>
         
         <script>
-            document.getElementById("KEZ_Einzelteile").innerHTML = "Beachte folgende rechtliche Besonderheiten: <br> &emsp; Kindererziehungszeiten vor 1992 sind<br> &emsp; maximal 30 KM lang<br> <br> &emsp; Kindererziehungszeiten nach 1991 sind <br> &emsp; maximal 36 KM lang<br> --------------------------------------------------------------------------------<br>Beachte mögliche Aufteilung der KEZ zwischen den verschiedenen Elternteilen<br>--------------------------------------------------------------------------------<br>";    
+            document.getElementById("KEZ_Einzelteile").innerHTML = "In den Eingabefeldern müssen pro Kind die anerkannten Kalendermonate mit Kindererziehungszeiten eingetragen werden!<br><br>Beachte folgende rechtliche Besonderheiten: <br> &emsp; Kindererziehungszeiten vor 1992 sind<br> &emsp; maximal 30 KM lang<br> <br> &emsp; Kindererziehungszeiten nach 1991 sind <br> &emsp; maximal 36 KM lang<br> --------------------------------------------------------------------------------<br>Beachte mögliche Aufteilung der KEZ zwischen den verschiedenen Elternteilen<br>--------------------------------------------------------------------------------<br>";    
         
         </script>
 
