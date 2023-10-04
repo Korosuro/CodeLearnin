@@ -34,3 +34,6 @@ Zur Verwendung von Variablen zwischen verschiedenen HTML Dokumenten müssen Cook
 &nbsp; zur Erstellung von Leerzeichen, die nicht zusammengezogen werden
 &emsp; zur Erstellung von Tabulatoren, die nicht zusammengezogen werden
 
+
+Eventuell Hover-Effekt von Fenstern entfernen, die keine Spezifische Funktion aufweisen
+
