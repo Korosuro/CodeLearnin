@@ -37,3 +37,5 @@ Zur Verwendung von Variablen zwischen verschiedenen HTML Dokumenten müssen Cook
 
 Eventuell Hover-Effekt von Fenstern entfernen, die keine Spezifische Funktion aufweisen
 
+
+

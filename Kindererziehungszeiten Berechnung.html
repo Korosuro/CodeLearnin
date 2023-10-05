@@ -106,6 +106,19 @@
             cursor: pointer;
         }
 
+        #HUB {
+            background-color: white;
+            font-size: 30px;
+            padding: 10px;
+            position: absolute;
+            left: 605px;
+            top: 104px;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+            cursor: pointer;        
+        }
+
     </style>
     <body>
         <button class="Headline">Berechnung Entgeltpunkte für Kindererziehungszeiten</button> 
@@ -114,7 +127,7 @@
         <div id="KEZ_Ausgabe"></div>                                                            
         <div id="KEZ_Einzelteile"></div>
         <button id="KEKS">Wert als Cookie festlegen</button>
-        
+
         <script>
             document.getElementById("InputAnzeigen").addEventListener("click", function() {
                 var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); 
@@ -148,13 +161,14 @@
                     var EPKEZ = sum * 0.0833;
 
                     //Erstellung Cookie zur Übertragung des KEZ Wertes an Anwendung.html
-                    document.getElementById("KEKS").addEventListener("click", function setCookie(PEPKEZ, EPKEZ) {
+                    document.getElementById("KEKS").addEventListener("click", function () {
+                        var PEPKEZ = "Entgeltpunkte für Kindererziehung";
+                        var EPKEZ = sum * 0.0833;
                         var expirationDays = 30;    
                         var d = new Date(); 
-                        d.setTime(d.get.Time() + (expirationDays * 24 * 60 * 60 * 1000)); 
+                        d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); 
                         var expires = "expires=" + d.toUTCString();
                         document.cookie = PEPKEZ + "=" + EPKEZ + ";" + expires + ";path=/";
-                        
                     });
 
                     document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";
