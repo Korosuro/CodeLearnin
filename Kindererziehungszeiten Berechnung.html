@@ -157,30 +157,25 @@
                             sum += KEZKM; //Wert zur Summe addiert
                         }
                     }
-                    
-                    var EPKEZ = sum * 0.0833;
-
-                    //Erstellung Cookie zur Übertragung des KEZ Wertes an Anwendung.html
-                    document.getElementById("KEKS").addEventListener("click", function () {
-                        var PEPKEZ = "Entgeltpunkte für Kindererziehung";
-                        var EPKEZ = sum * 0.0833;
+                  document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";       
+            var EPKEZ = sum * 0.0833; 
+            document.getElementById("KEKS").addEventListener("click", function setCookie(KEP, EPKEZ) {
+                        var cname = "KEP";
+                        var cvalue = EPKEZ;
                         var expirationDays = 30;    
                         var d = new Date(); 
                         d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); 
                         var expires = "expires=" + d.toUTCString();
-                        document.cookie = PEPKEZ + "=" + EPKEZ + ";" + expires + ";path=/";
+                        document.cookie = cname + "=" + cvalue + ";" + expires;
+                        alert("Cookie wurde erstellt");
+                        return;
                     });
-
-                    document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";
-                }); 
-                    //Ausgabe der KEZ KM mit Berechnungsweg in Textform
-            });
-        
+                  })
+           });                            
         </script>
-        
+
         <script>
             document.getElementById("KEZ_Einzelteile").innerHTML = "In den Eingabefeldern müssen pro Kind die anerkannten Kalendermonate mit Kindererziehungszeiten eingetragen werden!<br><br>Beachte folgende rechtliche Besonderheiten: <br> &emsp; Kindererziehungszeiten vor 1992 sind<br> &emsp; maximal 30 KM lang<br> <br> &emsp; Kindererziehungszeiten nach 1991 sind <br> &emsp; maximal 36 KM lang<br> --------------------------------------------------------------------------------<br>Beachte mögliche Aufteilung der KEZ zwischen den verschiedenen Elternteilen<br>--------------------------------------------------------------------------------<br>";    
-                    //Informationsfeld auf der rechten Seite
         </script>
 
     </body>
