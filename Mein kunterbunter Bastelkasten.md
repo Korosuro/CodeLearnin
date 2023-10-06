@@ -76,3 +76,12 @@ Beispiel für checkCookie
 
             }
         </script>
+
+
+        <button id="Erstellen">Erstellen</button>
+
+ window.onload = function erstellen() {
+                var cname = "KEP";
+                var cvalue;
+                document.cookie = cname + cvalue;    
+            };

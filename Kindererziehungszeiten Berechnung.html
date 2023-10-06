@@ -106,7 +106,7 @@
             cursor: pointer;
         }
 
-        #HUB {
+        #Erstellen {
             background-color: white;
             font-size: 30px;
             padding: 10px;
@@ -127,9 +127,11 @@
         <div id="KEZ_Ausgabe"></div>                                                            
         <div id="KEZ_Einzelteile"></div>
         <button id="KEKS">Wert als Cookie festlegen</button>
+        
 
         <script>
-            document.getElementById("InputAnzeigen").addEventListener("click", function() {
+                              
+             document.getElementById("InputAnzeigen").addEventListener("click", function() {
                 var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); 
 
                 if (!isNaN(KAnz) && KAnz > 0) {
@@ -159,19 +161,18 @@
                     }
                   document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";       
             var EPKEZ = sum * 0.0833; 
-            document.getElementById("KEKS").addEventListener("click", function setCookie(KEP, EPKEZ) {
+
+            document.getElementById("KEKS").addEventListener("click", function setCookie() {
                         var cname = "KEP";
-                        var cvalue = EPKEZ;
+                        var cvalue = String(EPKEZ);
                         var expirationDays = 30;    
                         var d = new Date(); 
                         d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); 
                         var expires = "expires=" + d.toUTCString();
                         document.cookie = cname + "=" + cvalue + ";" + expires;
-                        alert("Cookie wurde erstellt");
-                        return;
-                    });
+                        });
                   })
-           });                            
+            });                            
         </script>
 
         <script>
