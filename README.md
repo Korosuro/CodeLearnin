@@ -22,6 +22,9 @@ Ausgabebutton für Berechnung muss noch gemacht werden ====> Ist gemacht und fun
 
 Anordnung und Größenverhältnisse der Fenster ist abgeschlossen
 
+Eventuell position = relative setzen
+-> Anpassung für verschiedene Bildschirmgrößen
+-> Positionierung der Buttons und Fenster nicht zum Rand sondern zueinander, abgesehen von Headline und absoluten Randbuttons (nur einseitig am Rand) 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 In die Rentenberechnung müssen Zuschlagsberechnungen durchgeführt werden. Dazu gehören: BÜZ, KEZ, AZ, Grundrente
@@ -37,5 +40,6 @@ Zur Verwendung von Variablen zwischen verschiedenen HTML Dokumenten müssen Cook
 
 Eventuell Hover-Effekt von Fenstern entfernen, die keine Spezifische Funktion aufweisen
 
-
+Cookies sind Problem
+-> Erstellung funktioniert aber Abruf auf Anwendundsseite funktioniert nicht korrekt
 

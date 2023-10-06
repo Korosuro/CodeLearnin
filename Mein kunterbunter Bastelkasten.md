@@ -60,3 +60,19 @@ document.getElementById("CookieMonster").addEventListener("click", function () {
         }
     }
     alert("Der Cookie wurde nicht gefunden");
+____________________________________________________________________________________________________________________________________________________-
+
+Beispiel für checkCookie
+
+<script>
+            function checkCookie() {
+                let user = getCookie("PEPKEZ");
+                if (user != "") {
+                    alert("Es sind " + PEPKEZ);
+                } 
+                else {
+                    alert("Kaputt diese")
+                }
+
+            }
+        </script>
