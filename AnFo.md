@@ -17,3 +17,10 @@ _________________________________
 Funktion, Rente mit fertigen Zahlen einfach und schnell per Hand zu rechnen
 Sammlung aller Werte aus Subprogrammen per Cookies zur Endberechnung von Renten
 
+BÜZ-Berechnung
+______________
+
+-> Prüfung parallele BZen
+-> Prüfung Höchstwert => Zuschlag
+-> bei keinen parallelen Zeiten Doppel-BÜZ
+-> Zuschlag bis 0,0833 => Höchstwert insgesamt pro KM mit BÜZ und BZ

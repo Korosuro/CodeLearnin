@@ -6,12 +6,14 @@
     border-width: 2px;
     border-color: black;
     border-style: solid;
+    font-style: Arial;
     cursor: pointer;
     }
 
     /*Kopf-Button*/
 
 .container {
+    font-style: Arial;
     margin: 10px;
     position: absolute;
     left: 40px;
