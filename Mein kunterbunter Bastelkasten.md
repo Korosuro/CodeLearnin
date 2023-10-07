@@ -76,6 +76,8 @@ Beispiel für checkCookie
 
             }
         </script>
+_____________________________________________________________________________________________
+Leerer Cookie, der erstellt wird, wenn die Seite geladen wird
 
 
         <button id="Erstellen">Erstellen</button>
@@ -85,3 +87,7 @@ Beispiel für checkCookie
                 var cvalue;
                 document.cookie = cname + cvalue;    
             };
+______________________________________________________________________________________________
+Einfacher alert (kann nach Fertigstellung der Cookie Ausgabe gelöscht werden)
+
+  alert("Der Wert des Cookies " + PEPKEZ + " ist: " + cookieValue); 

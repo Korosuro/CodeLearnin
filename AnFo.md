@@ -26,3 +26,6 @@ ______________
 -> Prüfung Höchstwert => Zuschlag
 -> bei keinen parallelen Zeiten Doppel-BÜZ
 -> Zuschlag bis 0,0833 => Höchstwert insgesamt pro KM mit BÜZ und BZ
+-> Eingabefelder für BZ sollten wenn möglich nur Jahres-AEG beinhalten, wodurch dann im Hintergrund die EP Berechnung stattfindet
+-> Speicherung von Durchschnitts AEG der letzten Jahre
+-> Berücksichtigung von nur teilweise belegten Jahren

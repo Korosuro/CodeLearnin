@@ -34,15 +34,6 @@
                 transition: background-color 0.7s, width 0.7s, height 0.7s, color 0.7s, font-size 0.7s;
             }
 
-            /*Hover-Effekt Ausgabefeld*/               
-            #Rente:hover {
-                background-color: blue;
-                width: 600px;
-                height: 120px;
-                color: white;
-                font-size: 48px;
-            }
-
             /*ReferenceButton KEZ*/
             button[onclick="Rente()"] {
                 font-family: Arial;
@@ -125,14 +116,31 @@
                 top: 500px;
                 left: 645px;
             }
-            
+        
+            #RGes {
+                background-color: white;
+                border-color: black;
+                border-width: 2px;
+                border-style: solid;
+                margin: 10px;
+                padding: 10px;
+                left: 40px;
+                top: 300px;
+                position: absolute;
+                height: 136px;
+                width: 508px;
+                font-size: 30px;
+                color: black;
+            }
+
         </style>
 
     </head>
     <body>
         <button id="myButton" button class="button-1">Einfacher Rentenrechner</button>
         <button class="KEZ"><a href="Kindererziehungszeiten Berechnung.html" class="KEZ_Link" target="_blank">Kindererziehungszeiten errechnen</a></button>
-        <button id="CookieMonster">KEEEEKSEEEEE</button>
+        <button id="RGes"></button>
+        
         <script>
 
             var button = document.getElementById("myButton");
@@ -194,9 +202,9 @@
             }
 
         </script>
-        
+      
         <script>
-            document.getElementById("CookieMonster").addEventListener("click", function getCookie(KEP) {
+            document.getElementById("RGes");window.onload= function getCookie(KEP) {
                 var PEPKEZ = "KEP";
                 var name = PEPKEZ + "=";
                 var decodedCookie = decodeURIComponent(document.cookie);
@@ -209,13 +217,13 @@
                     }    
                     if (cookie.indexOf(name) == 0) {
                         var cookieValue = cookie.substring(name.length, cookie.length); 
-                        alert("Der Wert des Cookies " + PEPKEZ + " ist: " + cookieValue); 
+                        document.getElementById("RGes").textContent= "Die Anzahl an Entgeltpunkten aus Kindererziehung beträgt: " + cookieValue;
                         return;
                     }
                 }
                 alert("Der Cookie wurde nicht gefunden");
-            });
+            };
 
         </script>
     </body>
-</html> 
+</html>     

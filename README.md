@@ -42,4 +42,7 @@ Eventuell Hover-Effekt von Fenstern entfernen, die keine Spezifische Funktion au
 
 Cookies sind Problem
 -> Erstellung funktioniert aber Abruf auf Anwendundsseite funktioniert nicht korrekt
+-> Problem gelöst: Cookies funktionieren nur, wenn vor Anwendungsnutzung lokaler Server gestartet wird
 
+KEZ Anrechnung grundlegend abgeschlossen
+BÜZ Anrechnung kann auf gleicher Seite eingebettet werden
