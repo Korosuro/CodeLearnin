@@ -12,125 +12,7 @@
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                height: 100hv;
                 font-family: Arial;
-            }
-
-            /*Ausgabefeld Rente*/
-            #Rente {
-                font-family: Arial;
-                background-color: white;
-                padding: 10px;
-                margin: 10px;
-                width: 500px;
-                height: 96px;
-                position: absolute;
-                top: 140px;
-                left: 550px;
-                font-size: 40px;    
-                border-color: black;
-                border-width: 2px;
-                border-style: solid;
-                transition: background-color 0.7s, width 0.7s, height 0.7s, color 0.7s, font-size 0.7s;
-            }
-
-            /*ReferenceButton KEZ*/
-            button[onclick="Rente()"] {
-                font-family: Arial;
-                background-color: white;
-                color: black;
-                border: rgba(165, 48, 13, 0.781);
-                border-color: black;
-                border-width: 2px;
-                border-style: solid;
-                padding: 8px 16px;
-                cursor: pointer;
-                margin: 10px;
-                position: absolute;
-                left: 550px;
-                top: 100px;
-                font-size: 16px;
-                transition: background-color 0.7s, color 0.7s, font-size 0.7s, left 0.7s, top 0.7s;
-            }
-
-            /*Link-Button zu Kindererziehungszeiten.html*/
-            .KEZ {
-                font-style: Arial;
-                background-color: white;
-                border-color: black;
-                border-width: 2px;
-                border-style: solid;
-                padding: 10px;
-                margin: 10px;
-                position: absolute;
-                top: 100px;
-                left: 665px;
-            }
-
-            .KEZ:hover {
-                font-style: Arial;
-                background-image: url(BG_Talk.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                color: transparent;
-                font-size: 21px;
-                z-index: 2;
-                top: 96px;
-                left: 630px;
-                transition: background-image 0.7s, background-size 0.7s, background-position 0.7s, background-repeat 0.7s, color 0.7s, font-size 0.7s, left 0.7s, top 0.7s;
-            }
-
-            .KEZ_Link:link {
-                color: black;
-                text-decoration: none;
-            }
-
-            .KEZ_Link:visited {
-                color: transparent;
-            }
-            
-            .KEZ_Link:hover {
-                color: transparent;
-            }
-
-            button[onclick="Rente()"]:hover {
-                font-style: Arial;
-                background-color: blue;
-                color: white;
-                font-size: 24px;
-                z-index: 2;
-                left: 512px;
-                top: 96px;
-            }
-        
-            .CookieMonster {
-                font-style: Arial;  
-                background-color: white;
-                border-color: black;
-                border-width: 2px;
-                border-style: solid;
-                padding: 10px;
-                margin: 10px;
-                position: absolute;
-                top: 500px;
-                left: 645px;
-            }
-        
-            #RGes {
-                background-color: white;
-                border-color: black;
-                border-width: 2px;
-                border-style: solid;
-                margin: 10px;
-                padding: 10px;
-                left: 40px;
-                top: 300px;
-                position: absolute;
-                height: 136px;
-                width: 508px;
-                font-size: 30px;
-                color: black;
             }
 
         </style>
@@ -142,7 +24,6 @@
         <button id="RGes"></button>
         
         <script>
-
             var button = document.getElementById("myButton");
             button.style.position = "absolute";
             button.style.left = "50px";
@@ -221,7 +102,6 @@
                         return;
                     }
                 }
-                alert("Der Cookie wurde nicht gefunden");
             };
 
         </script>

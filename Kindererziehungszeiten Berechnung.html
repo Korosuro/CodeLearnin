@@ -13,6 +13,7 @@
             font-family: Arial;
         }
 
+
         /*Gestaltung von "Kopf-Button"*/
         .Headline {
             background-color: white;
@@ -118,8 +119,10 @@
         
 
         <script>
-                              
-             document.getElementById("InputAnzeigen").addEventListener("click", function() {
+            
+           
+
+            document.getElementById("InputAnzeigen").addEventListener("click", function() {
                 var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); 
 
                 if (!isNaN(KAnz) && KAnz > 0) {
@@ -148,7 +151,9 @@
                         }
                     }
                   document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";       
-            var EPKEZ = sum * 0.0833; 
+                });
+                  var EPKEZ = sum * 0.0833; 
+
 
             document.getElementById("KEKS").addEventListener("click", function setCookie() {
                         var cname = "KEP";
@@ -158,8 +163,8 @@
                         d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); 
                         var expires = "expires=" + d.toUTCString();
                         document.cookie = cname + "=" + cvalue + ";" + expires;
-                        });
-                  })
+                    alert("DINGS");    
+                    });
             });                            
         </script>
 
@@ -167,9 +172,6 @@
             document.getElementById("KEZ_Einzelteile").innerHTML = "In den Eingabefeldern müssen pro Kind die anerkannten Kalendermonate mit Kindererziehungszeiten eingetragen werden!<br><br>Beachte folgende rechtliche Besonderheiten: <br> &emsp; Kindererziehungszeiten vor 1992 sind<br> &emsp; maximal 30 KM lang<br> <br> &emsp; Kindererziehungszeiten nach 1991 sind <br> &emsp; maximal 36 KM lang<br> --------------------------------------------------------------------------------<br>Beachte mögliche Aufteilung der KEZ zwischen den verschiedenen Elternteilen<br>--------------------------------------------------------------------------------<br>";    
         //Berechnung der Bewertung von KEZ ist hier abgeschlossen, fortlaufend erfolgt Berechnung der Berücksichtigungszeiten
       </script>
-
-        
-
 
     </body>
 
