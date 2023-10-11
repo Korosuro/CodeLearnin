@@ -4,11 +4,13 @@
         <title>Berechnung Zuschlag Kindererziehungszeiten</title>
     </head>
     <style>
+        /*Hintergrundbild*/
         body {
-            background-image: url(BG_Tokyo.jpg);
+            background-image: url(BG_Talk.jpg);
             background-size: cover;
             background-position: inherit;
             background-repeat: no-repeat;
+            font-family: Arial;
         }
 
         /*Gestaltung von "Kopf-Button"*/
@@ -20,8 +22,8 @@
             left: 50px;
             top: 10px;
             border-width: 2px;
-            border-style: dashed;
-            border-color: ghostwhite;
+            border-style: solid;
+            border-color: black;
             cursor: pointer;
         }
 
@@ -33,10 +35,11 @@
             position: absolute;
             left: 50px;
             top: 104px;
-            border-color: ghostwhite;
-            border-style: dashed;
+            border-color: black;
+            border-style: solid;
             border-width: 2px;
             cursor: pointer;
+            transition: background-color 0.7s, color 0.7s, font-size 0.7s, left 0.7s, top 0.7s;
         }
 
         /*Gestaltung Container mit angegebener Menge Eingabefeldern*/
@@ -44,8 +47,8 @@
             background-color: white;
             font-size: 30px;
             padding: 10px;
-            border-color: ghostwhite;
-            border-style: dashed;
+            border-color: black;
+            border-style: solid;
             border-width: 2px;
             position: absolute;
             left: 50px;
@@ -53,31 +56,55 @@
             top: 174px;
         }
 
+        /*Hover-Effekt für Eingabefeld Kinderanzahl*/
+        #InputAnzeigen:hover {
+            background-color: blue;
+            color: white;
+            font-size: 36px;
+            left: 50px;
+            top: 104px;
+            z-index: 2;
+        }
+
         /*Gestaltung KEZ_Ausgabe Fenster*/
         #KEZ_Ausgabe {
             background-color: white;
             font-size: 30px;
             padding: 10px;
-            border-color: ghostwhite;
-            border-style: dashed;
+            border-color: black;
+            border-style: solid;
             border-width: 2px;
             position: absolute;
             left: 50px;
             right: 985px;
-            top: 700px;
+            top: 444px;
         }
 
+        /*Informationsfenster auf der rechten Seite des Bildschirms*/
         #KEZ_Einzelteile {
             background-color: white;
             font-size: 30px;
             padding: 10px;
-            border-color: ghostwhite;
-            border-style: dashed;
+            border-color: black;
+            border-style: solid;
             border-width: 2px;
             position: absolute;
             left: 985px;
             right: 50px;
-            top: 174px;
+            top: 104px;
+        }
+
+        #KEKS {
+            background-color: white;
+            font-size: 30px;
+            padding: 10px;
+            position: absolute;
+            left: 405px;
+            top: 104px;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+            cursor: pointer;
         }
 
     </style>
@@ -85,11 +112,14 @@
         <button class="Headline">Berechnung Entgeltpunkte für Kindererziehungszeiten</button> 
         <button id="InputAnzeigen">Eingabefelder anzeigen</button>
         <div id="InputContainer"></div>
-        <div id="KEZ_Ausgabe"></div>
+        <div id="KEZ_Ausgabe"></div>                                                            
         <div id="KEZ_Einzelteile"></div>
+        <button id="KEKS">Wert als Cookie festlegen</button>
         
+
         <script>
-            document.getElementById("InputAnzeigen").addEventListener("click", function() {
+                              
+             document.getElementById("InputAnzeigen").addEventListener("click", function() {
                 var KAnz = parseInt(prompt("Wie viele verschiedene Kinder sind bei der versicherten Person anerkannt?")); 
 
                 if (!isNaN(KAnz) && KAnz > 0) {
@@ -117,17 +147,29 @@
                             sum += KEZKM; //Wert zur Summe addiert
                         }
                     }
+                  document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";       
+            var EPKEZ = sum * 0.0833; 
 
-                    document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833;
-                });
-            });
-        
+            document.getElementById("KEKS").addEventListener("click", function setCookie() {
+                        var cname = "KEP";
+                        var cvalue = String(EPKEZ);
+                        var expirationDays = 30;    
+                        var d = new Date(); 
+                        d.setTime(d.getTime() + (expirationDays * 24 * 60 * 60 * 1000)); 
+                        var expires = "expires=" + d.toUTCString();
+                        document.cookie = cname + "=" + cvalue + ";" + expires;
+                        });
+                  })
+            });                            
         </script>
+
+        <script> 
+            document.getElementById("KEZ_Einzelteile").innerHTML = "In den Eingabefeldern müssen pro Kind die anerkannten Kalendermonate mit Kindererziehungszeiten eingetragen werden!<br><br>Beachte folgende rechtliche Besonderheiten: <br> &emsp; Kindererziehungszeiten vor 1992 sind<br> &emsp; maximal 30 KM lang<br> <br> &emsp; Kindererziehungszeiten nach 1991 sind <br> &emsp; maximal 36 KM lang<br> --------------------------------------------------------------------------------<br>Beachte mögliche Aufteilung der KEZ zwischen den verschiedenen Elternteilen<br>--------------------------------------------------------------------------------<br>";    
+        //Berechnung der Bewertung von KEZ ist hier abgeschlossen, fortlaufend erfolgt Berechnung der Berücksichtigungszeiten
+      </script>
+
         
-        <script>
-            document.getElementById("KEZ_Einzelteile").innerHTML = "Beachte folgende rechtliche Besonderheiten: <br> &emsp; Kindererziehungszeiten vor 1992 sind<br> &emsp; maximal 30 KM lang<br> <br> &emsp; Kindererziehungszeiten nach 1991 sind <br> &emsp; maximal 36 KM lang<br> --------------------------------------------------------------------------------<br>Beachte mögliche Aufteilung der KEZ zwischen den verschiedenen Elternteilen<br>--------------------------------------------------------------------------------<br>";    
-        
-        </script>
+
 
     </body>
 

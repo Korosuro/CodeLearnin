@@ -4,14 +4,16 @@
     background-color: white;
     color: black;
     border-width: 2px;
-    border-style: dashed;
-    border-color: ghostwhite;
+    border-color: black;
+    border-style: solid;
+    font-style: Arial;
     cursor: pointer;
     }
 
     /*Kopf-Button*/
 
 .container {
+    font-style: Arial;
     margin: 10px;
     position: absolute;
     left: 40px;
@@ -24,6 +26,9 @@
     flex-direction: column;
     text-align: left;
     align-items: flex-end;  
+    border-color: black;   
+    border-width: 2px;
+    border-style: solid;
 }
 
 
