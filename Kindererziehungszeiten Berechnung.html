@@ -43,12 +43,12 @@
                             sum += KEZKM; //Wert zur Summe addiert
                         }
                     }
-                  document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";       
+                    var EPKEZ = sum * 0.0833;
+                     document.getElementById("KEZ_Ausgabe").innerHTML = "Die Anzahl an Kalendermonaten mit Kindererziehungszeiten beträgt " + sum + " KM.<br>Daraus ergeben sich " + sum * 0.0833 + " Persönliche Entgeltpunkte.<br>Die Berechnung ergibt sich wie folgt: " + sum + " * 0,0833 = " + sum * 0.0833 + "<br> ";       
                 });
-                  var EPKEZ = sum * 0.0833; 
 
 
-            document.getElementById("KEKS").addEventListener("click", function setCookie() {
+                document.getElementById("KEKS").addEventListener("click", function setCookie() {
                         var cname = "KEP";
                         var cvalue = String(EPKEZ);
                         var expirationDays = 30;    
@@ -57,7 +57,7 @@
                         var expires = "expires=" + d.toUTCString();
                         document.cookie = cname + "=" + cvalue + ";" + expires;
                     alert("DINGS");    
-                    });
+                });
             });                            
         </script>
 
