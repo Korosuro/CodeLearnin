@@ -88,6 +88,3 @@ Leerer Cookie, der erstellt wird, wenn die Seite geladen wird
                 document.cookie = cname + cvalue;    
             };
 ______________________________________________________________________________________________
-Einfacher alert (kann nach Fertigstellung der Cookie Ausgabe gelöscht werden)
-
-  alert("Der Wert des Cookies " + PEPKEZ + " ist: " + cookieValue); 
