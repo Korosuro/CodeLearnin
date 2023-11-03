@@ -1,15 +1,36 @@
 body {
-    background-color:#282A35;
+    background-color:#0f1014;
     z-index: 0;
 }
 
 #menu {
-    background-color:#282A35;
+    background-color:#0f1014;
     z-index: 1;
     position: absolute;
-    width: 15%;
+    width: 288px;
     left: 0px;
     top: 0px; 
     bottom: 0px;
-    box-shadow: 50px 0px 20px black;
+    box-shadow: 50px 0px 20px rgb(4, 197, 197);
+}
+
+#TicTacToe {
+    background-color: #0f1014;
+    background-position: inherit;
+    background-size: auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    border-color:rgb(4, 197, 197);
+    border-width: 2px;
+    border-radius: 50%;
+    border-style: solid;
+    left: 121px;
+    top: 150px;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+#TicTacToe:hover {
+
 }
