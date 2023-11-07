@@ -1,3 +1,11 @@
+@keyframes Bund {
+    0% {box-shadow: 50px 0px 20px white;}
+    25% {box-shadow: 50px 0px 20px rgb(4, 197, 197);}
+    50% {box-shadow: 50px 0px 20px white;}
+    75% {box-shadow: 50px 0px 20px rgb(4, 197, 197);}
+    100% {box-shadow: 50px 0px 20px white;}
+}
+
 body {
     background-color:#0f1014;
     z-index: 0;
@@ -12,25 +20,31 @@ body {
     top: 0px; 
     bottom: 0px;
     box-shadow: 50px 0px 20px rgb(4, 197, 197);
+    animation-name: Bund;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
-#TicTacToe {
+.TicTacToe {
     background-color: #0f1014;
-    background-position: inherit;
-    background-size: auto;
-    background-repeat: no-repeat;
-    position: absolute;
     border-color:rgb(4, 197, 197);
     border-width: 2px;
-    border-radius: 50%;
     border-style: solid;
-    left: 121px;
-    top: 150px;
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: 10px;
     z-index: 2;
 }
 
-#TicTacToe:hover {
-
+#TicTacGrid {
+    display: grid;
+    gap: 5px;
+    z-index: 2;
+    grid-template-columns: 15px 15px 15px;
+    position: absolute;
+    top: 150px;
+    left: 110px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
 }
+
